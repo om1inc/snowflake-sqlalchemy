@@ -24,7 +24,7 @@ jobs:
     name: Check linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -61,7 +61,7 @@ jobs:
       python-version: ["3.8"]
       cloud-provider: [aws, azure, gcp]
    steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -110,7 +110,7 @@ jobs:
       python-version: ["3.8"]
       cloud-provider: [aws]
    steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true
     - name: Set up Python
@@ -144,7 +144,7 @@ jobs:
     needs: [test, test_connector_regression]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v2
         with:
           path: artifacts
